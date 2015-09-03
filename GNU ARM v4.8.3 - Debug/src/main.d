@@ -71,7 +71,8 @@ src/main.o: ../src/main.c \
  C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/config/displayconfig.h \
  C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/config/retargettextdisplayconfig.h \
  C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/examples/usbdhidkbd/scrolllcd.h \
- C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/examples/usbdhidkbd/image.h
+ C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/examples/usbdhidkbd/image.h \
+ ../src/gecko_image.h
 
 C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32HG/Include/em_device.h:
 
@@ -218,3 +219,5 @@ C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32
 C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/examples/usbdhidkbd/scrolllcd.h:
 
 C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/kits/SLSTK3400A_EFM32HG/examples/usbdhidkbd/image.h:
+
+../src/gecko_image.h:

@@ -426,4 +426,18 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="IAR ARM - Release">
+			<resource resourceType="PROJECT" workspacePath="/gecko_reporter"/>
+		</configuration>
+		<configuration configurationName="IAR ARM - Debug">
+			<resource resourceType="PROJECT" workspacePath="/gecko_reporter"/>
+		</configuration>
+		<configuration configurationName="GNU ARM v4.8.3 - Release">
+			<resource resourceType="PROJECT" workspacePath="/gecko_reporter"/>
+		</configuration>
+		<configuration configurationName="GNU ARM v4.8.3 - Debug">
+			<resource resourceType="PROJECT" workspacePath="/gecko_reporter"/>
+		</configuration>
+	</storageModule>
 </cproject>

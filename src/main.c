@@ -23,6 +23,7 @@
 #include "display.h"
 #include "scrolllcd.h"
 #include "image.h"
+#include "gecko_image.h"
 
 /**************************************************************************//**
  *
@@ -115,7 +116,7 @@ int main(void)
                                   0, displayDevice.geometry.width,
                                   /* start row, height */
                                   0, displayDevice.geometry.height);
-  scrollLcd( &displayDevice, scrollLeft, blank_image, usb_image );
+  scrollLcd( &displayDevice, scrollLeft, blank_image, gecko_image );
 
   /* Initialize HID keyboard driver. */
   hidInitStruct.hidDescriptor = (void*)USBDESC_HidDescriptor;
