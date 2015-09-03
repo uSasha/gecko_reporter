@@ -184,7 +184,7 @@ static void ScanTimeout( void )
   {
     if ( pushedPB0 )
     {
-      report = (void*)&USBDESC_reportTable[ keySeqNo ];
+      report = (void*)&USBDESC_reportTable[ 0 ];
     }
     else
     {
@@ -210,25 +210,21 @@ static void ScanTimeout( void )
   /* Check pushbutton PB1 */
   pushedPB1 = GPIO_PinInGet( BUTTON1_PORT, BUTTON1_PIN ) == 0;
 
-  if ( pushedPB1 != leusbTogglePushed )  /* Any change in LEUSB mode button ? */
+  if ( pushedPB1 != keyPushed )  /* Any change in keyboard status ? */
   {
-	leusbTogglePushed = pushedPB1;	/* Update PB1 status */
-    if ( leusbTogglePushed )	/* LEUSB mode button was pressed (not released) */
+    if ( pushedPB1 )
     {
-      if ( leusbEnabled ) /* User has requested to disable USB LEM */
-      {
-        /* Turn off Low Energy Mode (LEM) features. */
-        USB->CTRL &= ~USB_CTRL_LEMIDLEEN;
-      }
-      else
-      {
-        /* Turn on Low Energy Mode (LEM) features. */
-        USB->CTRL |= USB_CTRL_LEMIDLEEN;
-      }
-      refreshDisplay = true; /* Set the "refresh display" flag */
-      leusbEnabled = !leusbEnabled;	/* Update LEUSB mode status */
+      report = (void*)&USBDESC_reportTable[ 1 ];
     }
+    else
+    {
+      report = (void*)&USBDESC_noKeyReport;
+    }
+
+    /* Pass keyboard report on to the HID keyboard driver. */
+    HIDKBD_KeyboardEvent( report );
   }
+  keyPushed = pushedPB1;
 
   /* Restart keyboard scan timer */
   USBTIMER_Start( SCAN_TIMER, SCAN_RATE, ScanTimeout );
