@@ -1,19 +1,11 @@
-USB LEUSB HID keyboard example. (Extends original HID keyboard example)
-
+Simple way to make external custom USB keyboard.
+In this case it has two functions: 1 button copy and paste.
 This example project uses the EFM32 USB Device protocol stack
-and implements an USB HID class keyboard device (one button !).
+and implements an USB HID class keyboard device. Also I implemented some fun graphics.
 
 The HID device enumerates and immediately disables the Low Energy USB features
 (which are enabled by default in the USB protocol stack), allowing observation
 of "normal" power consumption on VBUS.
-
-PB0 is the keyboard button. Pressing this button will succesively write
-"Silicon Labs / ".
-
-PB1 is the toggle button for Low Energy Mode (LEM).  Pressing this button will
-alternate between LEM enabled/disabled.  The graphic displayed on the STK LCD
-will update to reflect this state (reads "HID keyboard Device" in normal mode,
-or "Low-Energy USB" when LEM is enabled).
 
 The example is power optimized when LEM is enabled.  With the STK power switch in
 "USB" position (board power is drawn from USB host via VBUS), when USB cable is plugged
